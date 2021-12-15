@@ -1,5 +1,7 @@
 const yaml = require("js-yaml")
 const htmlmin = require("html-minifier")
+const { format } = require('date-fns')
+const readingTime = require('eleventy-plugin-reading-time')
 
 module.exports = (eleventyConfig) => {
     // Disable automatic use of your .gitignore
@@ -20,6 +22,9 @@ module.exports = (eleventyConfig) => {
             collapseWhitespace: true
         })
     })
+
+    eleventyConfig.addFilter('datefmt', (contentDate) => format(contentDate, 'LLL do, yyyy'))
+    eleventyConfig.addPlugin(readingTime)
 
     return {
         htmlTemplateEngine: 'njk',

@@ -1,0 +1,6 @@
+{
+    "tags": [
+        "posts"
+    ],
+    "layout": "blog.njk"
+}

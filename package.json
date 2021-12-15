@@ -16,6 +16,8 @@
     "@11ty/eleventy": "^0.12.1",
     "@tailwindcss/forms": "^0.4.0",
     "@tailwindcss/typography": "^0.5.0",
+    "date-fns": "^2.27.0",
+    "eleventy-plugin-reading-time": "^0.0.1",
     "html-minifier": "^4.0.0",
     "js-yaml": "^4.1.0",
     "npm-run-all": "^4.1.5",

@@ -1,0 +1,19 @@
+---
+layout: base.njk
+---
+<div class="md:mx-auto md:p-0 container flex-auto p-4 mt-12 prose-lg">
+    <div class="md:flex-row flex flex-col justify-between">
+        <h1>{{ title }}</h1>
+        <div>
+            <div class="md:text-right m-0">{{ date | datefmt }}</div>
+            <h4 class="flex mt-2 mb-6 space-x-3">
+                <div>{{ content | readingTime }} read</div>
+                <div class="flex items-center px-2 py-1 text-xs text-blue-900 bg-blue-300 rounded-md">
+                    {{ category }}
+                </div>
+            </h4>
+        </div>
+    </div>
+    <hr class="mt-2 mb-6" />
+    {{ content | safe }}
+</div>
