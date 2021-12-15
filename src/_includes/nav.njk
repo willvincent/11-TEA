@@ -1,0 +1,19 @@
+<nav class="drop-shadow-lg p-4 mb-6 bg-gray-600">
+    <div class="flex items-center justify-between text-gray-200">
+        <a href="{{ settings.url }}" class="group flex items-center space-x-2">
+            <svg class="group-hover:text-blue-600 inline-block w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+            <span class="group-hover:text-blue-200 text-2xl">Logo</span>
+        </a>
+        <div class="space-x-12 text-lg">
+            {% for link in navLinks %}
+              <a class="hover:text-blue-200" href="{{ link.url }}">{{ link.label }}</a>
+            {% endfor %}
+        </div>
+
+        <a class="hover:text-blue-200" href="https://github.com/willvincent/11-TEA" target="_blank">
+            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 142 140">
+                <path fill="currentColor" d="M70.132 2.5C32.657 2.5 2.266 32.888 2.266 70.38c0 29.983 19.446 55.424 46.416 64.4 3.396.62 4.634-1.476 4.634-3.272 0-1.612-.059-5.879-.092-11.545-18.88 4.104-22.862-9.096-22.862-9.096-3.088-7.842-7.538-9.93-7.538-9.93-6.162-4.212.467-4.124.467-4.124 6.812.479 10.396 6.991 10.396 6.991 6.054 10.375 15.887 7.38 19.754 5.642.616-4.388 2.37-7.38 4.308-9.075-15.07-1.713-30.917-7.538-30.917-33.546 0-7.408 2.646-13.467 6.988-18.212-.7-1.717-3.03-8.617.667-17.963 0 0 5.695-1.825 18.662 6.958 5.413-1.504 11.22-2.258 16.992-2.283 5.766.025 11.57.78 16.991 2.283 12.959-8.783 18.646-6.958 18.646-6.958 3.704 9.346 1.375 16.246.68 17.963 4.35 4.745 6.974 10.804 6.974 18.212 0 26.075-15.87 31.813-30.987 33.492 2.433 2.096 4.604 6.237 4.604 12.57 0 9.076-.083 16.396-.083 18.621 0 1.813 1.225 3.925 4.666 3.263 26.95-8.992 46.38-34.417 46.38-64.392 0-37.491-30.392-67.879-67.88-67.879Z"/>
+            </svg>
+        </a>
+    </div>
+</nav>
