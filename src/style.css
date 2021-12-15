@@ -3,3 +3,11 @@
 @tailwind utilities;
 
 [x-cloak] { display: none !important; }
+
+.lazy-img {
+    filter: blur(8px);
+    transition: filter 0.3s ease-in;
+}
+
+.lazy-picture[data-loaded] .lazy-img { filter: unset; }
+  

@@ -2,6 +2,7 @@ const yaml = require("js-yaml")
 const htmlmin = require("html-minifier")
 const { format } = require('date-fns')
 const readingTime = require('eleventy-plugin-reading-time')
+const { image: imageShortcode } = require('./eleventy_src/shortcodes')
 
 module.exports = (eleventyConfig) => {
     // Disable automatic use of your .gitignore
@@ -23,8 +24,24 @@ module.exports = (eleventyConfig) => {
         })
     })
 
-    eleventyConfig.addFilter('datefmt', (contentDate) => format(contentDate, 'LLL do, yyyy'))
+    // Shortcodes
+    // -----------------------------------------------------
+    eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode)
+
+    // Filters
+    // -----------------------------------------------------
+    eleventyConfig.addFilter('datefmt', (contentDate) => {
+        return format(contentDate, 'LLL do, yyyy')
+    })
+
+    // Plugins
+    // -----------------------------------------------------
     eleventyConfig.addPlugin(readingTime)
+
+
+    // Passthroughs
+    // -----------------------------------------------------
+    eleventyConfig.addPassthroughCopy('src/assets/js')
 
     return {
         htmlTemplateEngine: 'njk',

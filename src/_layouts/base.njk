@@ -9,6 +9,7 @@
     <script defer src="https://unpkg.com/@alpinejs/intersect@3.7.0/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/collapse@3.7.0/dist/cdn.min.js"></script>
     <script src="//unpkg.com/alpinejs@3.7.0/dist/cdn.min.js" defer></script>
+    <noscript><style>noscript { display: contents; } .lazy-img { display: none; }</style></noscript>
     <title>{{ title }}</title>
 </head>
 
@@ -18,6 +19,7 @@
     {{ content | safe }}
     
     {% include 'footer.njk' %}
+    <script src="/assets/js/site.js"></script>
 </body>
 
 </html>
