@@ -1,0 +1,15 @@
+node_modules/*
+dist/*
+
+
+# MacOS garbage
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+*.DS_Store
+ 
+# Other source repository archive directories (protects when importing)
+.hg
+.svn
+CVS

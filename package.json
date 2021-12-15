@@ -1,0 +1,20 @@
+{
+  "name": "11ty-tailwind",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev:css": "npx tailwindcss -i src/input.css -o dist/output.css -w",
+    "dev:11ty": "eleventy --serve",
+    "dev": "node_modules/.bin/run-p dev:*",
+    "build:css": "NODE_ENV=production npm tailwindcss -i src/input.css -o dist/output.css -m",
+    "build:11ty": "eleventy",
+    "build": "node_modules/.bin/run-s build:*"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.0",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.0.2"
+  }
+}
