@@ -1,4 +1,4 @@
-<div x-data="{ open: false }" @keydown.escape="open = false" class="h-16 bg-gray-600">
+<div x-data="{ open: false }" @keydown.escape="open = false" @click.away="open = false" class="h-16 bg-gray-600">
     <nav class="drop-shadow-lg md:mb-6 p-4 bg-gray-600">
         <div class="flex items-center justify-between text-gray-200">
             <div class="md:hidden w-6">
