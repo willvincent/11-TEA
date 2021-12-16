@@ -18,7 +18,7 @@ module.exports.default = async (
     widths = [640, 768, 1024, 1280],
     baseFormat = 'jpeg',
     optimizedFormats = ['webp'],
-    sizes = '100vw'
+    sizes = '(min-width: 640px) 640px, (min-width: 768px) 768px, (min-width: 1024px) 1024px, (min-width: 1280px) 1200px, 100vw'
 ) => {
     let imageDir = '/assets/images/external'
     let fullSrc = src
@@ -64,13 +64,11 @@ module.exports.default = async (
                                     .map((image) => image.srcset)
                                     .join(', ')
             
-            return `<source type="${sourceType}" srcset="${placeholderSrcset}" data-srcset="${actualSrcset} data-sizes=${sizes}">`
+            return `<source type="${sourceType}" srcset="${placeholderSrcset}" data-srcset="${actualSrcset}" data-sizes="${sizes}">`
         }).join('\n')}
         <img
         src="${formatSizes[baseFormat].placeholder.url}"
         data-src="${formatSizes[baseFormat].largest.url}"
-        width="${formatSizes[baseFormat].largest.width}"
-        height="${formatSizes[baseFormat].largest.height}"
         alt="${alt}"
         class="lazy-img${className ? ' ' + className : ''}"
         loading="lazy"
