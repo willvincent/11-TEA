@@ -6,7 +6,9 @@ title: Blog
         {% for post in collections.posts | reverse %}
         <div class="group min-h-64 flex flex-col justify-between border rounded-lg">
             <a href="/posts/{{ post.fileSlug }}" class="group-hover:text-blue-800">
-                {% image post.data.image, post.data.title, 'object-cover h-48 w-full' %}
+                <div class="overflow-hidden">
+                    {% image post.data.image, post.data.title, 'object-cover h-48 w-full group-hover:scale-110 group-hover:rotate-3 group-hover:opacity-75' %}
+                </div>
                 <h2 class="text-lg font-semibold tracking-wide text-center">{{ post.data.title }}</h2>
             </a>
             <div class="flex justify-between p-2">
