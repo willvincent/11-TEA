@@ -1,6 +1,7 @@
 ---
 title: Duis eget felis
 category: Hobbies
+image: https://picsum.photos/1200/512?4
 date: 2021-11-22
 ---
 

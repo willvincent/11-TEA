@@ -1,6 +1,7 @@
 ---
 title: Morbi ut ex sagittis
 category: Hobbies
+image: https://picsum.photos/1200/512?3
 date: 2021-11-20
 ---
 

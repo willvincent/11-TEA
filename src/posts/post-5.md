@@ -1,6 +1,7 @@
 ---
 title: Aenean imperdiet euismod
 category: Software
+image: https://picsum.photos/1200/512?5
 date: 2021-12-02
 ---
 

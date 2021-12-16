@@ -1,6 +1,7 @@
 ---
 title: Lorem ipsum dolor
 category: Software
+image: https://picsum.photos/1200/512?1
 date: 2021-10-31
 ---
 

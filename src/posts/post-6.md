@@ -1,6 +1,7 @@
 ---
 title: Morbi orci nunc
 category: Hobbies
+image: https://picsum.photos/1200/512?6
 date: 2021-12-10
 ---
 

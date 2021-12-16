@@ -1,6 +1,7 @@
 ---
 title: Pellentesque habitant morbi tristique
 category: Software
+image: https://picsum.photos/1200/512?2
 date: 2021-11-17
 ---
 

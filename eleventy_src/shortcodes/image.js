@@ -55,7 +55,7 @@ module.exports.default = async (
         return formatSizes
     }, {})
 
-    const picture = `<picture class="lazy-picture${className ? ' ' + className : ''}">
+    const picture = outdent`<picture class="lazy-picture">
         ${Object.values(imageMetadata).map((formatEntries) => {
             const { format: formatName, sourceType } = formatEntries[0]
             const placeholderSrcset = formatSizes[formatName].placeholder.url;
@@ -72,10 +72,10 @@ module.exports.default = async (
         width="${formatSizes[baseFormat].largest.width}"
         height="${formatSizes[baseFormat].largest.height}"
         alt="${alt}"
-        class="lazy-img"
+        class="lazy-img${className ? ' ' + className : ''}"
         loading="lazy"
         decoding="async">
         </picture>`
 
-    return outdent(picture)
+    return picture
 }
