@@ -14,9 +14,19 @@
 </head>
 
 <body class="bg-slate-50 tet-gray-900 flex flex-col min-h-screen">
+    <a 
+        class="focus:translate-y-0 absolute z-50 p-4 m-1 text-red-500 transition-transform -translate-y-16 bg-black rounded-lg"
+        href="#main-content"
+        tabindex="0"
+    >
+        Skip Navigation
+    </a>
+
     {% include 'nav.njk' %}
     
-    {{ content | safe }}
+    <div id="main-content" class="flex-auto">
+        {{ content | safe }}
+    </div>
     
     {% include 'footer.njk' %}
     <script src="/assets/js/site.js"></script>
